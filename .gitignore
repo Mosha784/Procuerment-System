@@ -1,0 +1,119 @@
+# ============================================================
+# Taager Procurement System v2 — .gitignore
+# Stack: Python (FastAPI/Celery) + Next.js + Docker + PostgreSQL
+# ============================================================
+
+# ─── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# pytest / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+coverage.xml
+nosetests.xml
+
+# mypy / type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# ─── Node.js / Next.js ──────────────────────────────────────
+node_modules/
+.next/
+out/
+.turbo/
+.vercel/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ─── Environment & Secrets ──────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Google Service Account keys (CRITICAL — never commit)
+*-sa-key.json
+gsa-key.json
+service-account*.json
+credentials.json
+
+# ─── Docker ─────────────────────────────────────────────────
+docker-compose.override.yml
+.docker/
+
+# ─── Database ───────────────────────────────────────────────
+*.sql.bak
+*.dump
+pgdata/
+
+# ─── IDE & Editor ───────────────────────────────────────────
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── OS ─────────────────────────────────────────────────────
+.DS_Store
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# ─── Agent / Specify (selective) ────────────────────────────
+# Keep .agent/ and .specify/ tracked (they contain skills/templates)
+# But exclude any agent-generated credentials or local state
+.agent/local/
+.agent/.cache/
+
+# ─── Misc ───────────────────────────────────────────────────
+*.log
+logs/
+tmp/
+temp/
+*.bak
+*.tmp
+*.orig
